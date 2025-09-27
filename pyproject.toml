@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "tutor-rag"
+version = "0.1.0"
+description = ""
+authors = ["sajankc999 <kcsajan272@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.2.6"
+django-environ = "^0.12.0"
+psycopg2-binary = "^2.9.10"
+langchain-core = "^0.3.76"
+langchain-openai = "^0.3.33"
+djangorestframework = "^3.16.1"
+django-extensions = "^4.1"
+celery = "^5.5.3"
+redis = "^6.4.0"
+transformers = "^4.56.2"
+sentence-transformers = "^5.1.0"
+langchain = "^0.3.27"
+langchain-community = "^0.3.29"
+torch = "^2.0.0"
+regex = "^2025.9.18"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
