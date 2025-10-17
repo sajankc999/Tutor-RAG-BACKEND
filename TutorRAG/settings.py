@@ -44,10 +44,12 @@ SYSTEM_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_extensions',
+    "rest_framework",
 ]
 
 PROJECT_APPS =[
     "content",
+    "chatshell",
 
 ]
 
