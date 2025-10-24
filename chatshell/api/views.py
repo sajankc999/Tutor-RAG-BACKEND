@@ -20,9 +20,6 @@ from chatshell.enums import get_dict_value
 client = genai.Client()
 
 
-CHROMA_PATH = 'chroma'
-
-embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 
 """Model to run locally """
@@ -67,12 +64,7 @@ Answer the question based on the above context: {question}
 # )            
 
 # rag = RAGWithCitations("PleIAs/Pleias-RAG-350M")
-db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embeddings, 
-   collection_name="uploaded-file",
-)
-
-
-
+db = vector_store
 class AskQueryView(APIView):
     
     def post(self,request,*args, **kwargs):

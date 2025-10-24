@@ -5,10 +5,7 @@ from langchain_huggingface import HuggingFaceEmbeddings
 import os
 import shutil
 from langchain_text_splitters.character import RecursiveCharacterTextSplitter
-
-
-embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-
+from chatshell.embeddings.embedder import vector_store
 
 DATA_PATH = 'media/contents'
 CHROMA_PATH = 'chroma'
@@ -24,12 +21,7 @@ def save_to_chroma(chunks:list[Document]):
 
     if not os.path.exists(CHROMA_PATH):
         os.mkdir(CHROMA_PATH)
-    db = Chroma(
-        collection_name='uploaded-file',
-        embedding_function=embeddings,
-        persist_directory=CHROMA_PATH
-
-    )
+    db = vector_store
     db.add_documents(chunks)
     # db.persist()
 

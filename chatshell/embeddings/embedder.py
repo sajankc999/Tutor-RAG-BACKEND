@@ -4,6 +4,8 @@ from django.conf import settings
 from langchain_huggingface import HuggingFaceEmbeddings
 # from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_chroma import Chroma
+from django.conf import settings
+
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 # embeddings = GoogleGenerativeAIEmbeddings(
 #     model="models/embedding-001"
@@ -12,7 +14,7 @@ embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-
 vector_store = Chroma(
     collection_name="uploaded-file",
     embedding_function=embeddings,
-    persist_directory="chroma"
+    persist_directory=settings.CHROMA_PATH
 )
 
 
