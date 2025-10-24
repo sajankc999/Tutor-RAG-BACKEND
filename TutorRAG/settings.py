@@ -147,3 +147,6 @@ CELERY_TASK_TIME_LIMIT = 30 * 60
 
 #  for Redis
 CELERY_BROKER_URL = "redis://localhost:6379/0"
+
+CHROMA_PATH = 'chroma'
+DATA_PATH ='media/contents'
