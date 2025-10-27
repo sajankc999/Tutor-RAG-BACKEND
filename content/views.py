@@ -75,4 +75,6 @@ class ContentCreateAPIView(CreateAPIView):
             documents=[document]
         )
 
+        return response
+
 

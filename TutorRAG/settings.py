@@ -48,6 +48,7 @@ SYSTEM_APPS = [
 ]
 
 PROJECT_APPS =[
+    "accounts",
     "content",
     "chatshell",
 
@@ -66,6 +67,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'TutorRAG.urls'
+
+AUTH_USER_MODEL = "accounts.User"
+
 
 TEMPLATES = [
     {
@@ -150,3 +154,11 @@ CELERY_BROKER_URL = "redis://localhost:6379/0"
 
 CHROMA_PATH = 'chroma'
 DATA_PATH ='media/contents'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
