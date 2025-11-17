@@ -7,12 +7,12 @@ from rest_framework.status import HTTP_200_OK
 # from Pleias_RAG_Library.pleias_rag_interface import RAGWithCitations
 # from langchain.chains.retrieval_qa.base import RetrievalQA
 
-from langchain_huggingface import HuggingFacePipeline
-from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
+# from langchain_huggingface import HuggingFacePipeline
+# from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 from langchain_core.prompts import PromptTemplate
-from langchain_community.vectorstores import Chroma
+# from langchain_community.vectorstores import Chroma
 from google import genai
-from langchain_huggingface import HuggingFaceEmbeddings
+# from langchain_huggingface import HuggingFaceEmbeddings
 
 from chatshell.enums import get_dict_value
 
